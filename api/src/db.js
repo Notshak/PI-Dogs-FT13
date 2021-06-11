@@ -2,6 +2,7 @@ require('dotenv').config();
 const { Sequelize } = require('sequelize');
 const fs = require('fs');
 const path = require('path');
+const axios = require("axios");
 const {
   DB_USER, DB_PASSWORD, DB_HOST,
 } = process.env;
@@ -34,17 +35,25 @@ const { Dog, Temperament } = sequelize.models;
 
 // Aca vendrian las relaciones
 // Product.hasMany(Reviews);
-Dog.hasMany(Temperament, {
-  foreignKey: {
-    name: 'dogId',
-  }
-})
-Temperament.belongsTo(Dog, {
-  foreignKey: {
-    name: 'dogId',
-    allowNull: false,
-  }
-})
+Dog.belongsToMany(Temperament, {through: 'DogTemperaments'})
+Temperament.belongsToMany(Dog, {through: 'DogTemperaments'})
+
+axios.get(`https://api.thedogapi.com/v1/breeds`)
+  .then(response => {
+      var actual;
+      let array2 = []
+      response.data.forEach(resp => {
+          if(resp.temperament){
+              actual = resp.temperament.split(` `)
+              actual.forEach(element => {
+                  if(element[element.length-1]===","){
+                      element = element.slice(0, element.length-1)}
+                  if(array2.includes(element)){}
+                  else{
+                    array2.push(element)
+                    Temperament.create({name:element})}
+})}})})
+
 
 
 module.exports = {
