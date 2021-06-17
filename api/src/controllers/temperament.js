@@ -18,25 +18,14 @@ async function addTemperament(req, res, next){
         next(error);
     }
 }
-
-function getAllTemperament(req, res, next){
-    axios.get(url)
-    .then(response => {
-        var actual;
-        response.data.forEach(resp => {
-            if(resp.temperament){
-                actual = resp.temperament.split(` `)
-                actual.forEach(element => {
-                    if(element[element.length-1]===","){
-                        element = element.slice(0, element.length-1)}
-                    if(array.includes(element)){counter++}
-                    elsearray.push(element)})}
-        })
-        array.sort()
-        res.json(array)})
-        array = []
-    .catch(error => res.status(500).json({error: `error en /temperament`}))
+async function getAllTemperament(req,res){
+     let unarray = await Temperament.findAll()
+     unarray.forEach(element => array.push(element.name))
+     res.json(array)
+     array = []
 }
+
+
 
 module.exports = {
     getAllTemperament,

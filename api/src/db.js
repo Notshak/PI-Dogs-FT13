@@ -41,7 +41,7 @@ Temperament.belongsToMany(Dog, {through: 'DogTemperaments'})
 axios.get(`https://api.thedogapi.com/v1/breeds`)
   .then(response => {
       var actual;
-      let array2 = []
+      let array2 = [];
       response.data.forEach(resp => {
           if(resp.temperament){
               actual = resp.temperament.split(` `)
@@ -53,8 +53,7 @@ axios.get(`https://api.thedogapi.com/v1/breeds`)
                     array2.push(element)
                     Temperament.create({name:element})}
 })}})})
-
-
+//
 
 module.exports = {
   ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');
