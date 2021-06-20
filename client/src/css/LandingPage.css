@@ -1,0 +1,16 @@
+.LandingButton{
+    color: rgb(0, 0, 0);
+    font-family: 'Baloo Tammudu 2', cursive;
+    font-size: 28px;
+    text-decoration: none;
+    width: 200px;
+    height: 60px;
+    border: 5px solid;
+    border-radius: 25px;
+    border-color: #ec9c46;
+    background-color: #df7000c5;
+}
+.LandingButtonLink{
+    text-decoration: none;
+    color:rgb(0, 0, 0)
+}

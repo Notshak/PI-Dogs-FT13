@@ -1,0 +1,116 @@
+.thisDog{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(13, 45px);
+    grid-gap: 10px;
+}
+.Name{
+    border: 5px solid;
+    border-radius: 25px;
+    border-color: #ec9c46;
+    background-color: #df7000c5;
+    font-family: 'Baloo Tammudu 2', cursive;
+    grid-row: 3;
+    grid-column: 3;
+}
+.Weight{
+    border: 5px solid;
+    border-radius: 25px;
+    border-color: #ec9c46;
+    background-color: #df7000c5;
+    font-family: 'Baloo Tammudu 2', cursive;
+    grid-row: 4;
+    grid-column: 3;
+}
+.Height{
+    border: 5px solid;
+    border-radius: 25px;
+    border-color: #ec9c46;
+    background-color: #df7000c5;
+    font-family: 'Baloo Tammudu 2', cursive;
+    grid-row: 5;
+    grid-column: 3;
+}
+.Life{
+    border: 5px solid;
+    border-radius: 25px;
+    border-color: #ec9c46;
+    background-color: #df7000c5;
+    font-family: 'Baloo Tammudu 2', cursive;
+    grid-row: 6;
+    grid-column: 3;
+}
+.Temperament{
+    border: 5px solid;
+    border-radius: 25px;
+    border-color: #ec9c46;
+    background-color: #df7000c5;
+    width: 150px;
+    height: 95px;
+    font-family: 'Baloo Tammudu 2', cursive;
+    grid-row: 7;
+    grid-column: 3;
+}
+.img{
+    align-content: center;
+    font-family: 'Baloo Tammudu 2', cursive;
+    grid-row: 2 / 11;
+    grid-column: 6 / 8;
+}
+.DogImg{
+    border: 5px solid;
+    border-radius: 25px;
+    border-color: #ec9c46;
+    background-color: #df7000c5;
+    border-radius: 25px;
+    width: 550px;
+    height:550px;
+}
+.SpanName{
+    border: 5px solid;
+    border-radius: 25px;
+    border-color: #ec9c46;
+    background-color: #df7000c5;
+    font-family: 'Baloo Tammudu 2', cursive;
+    grid-row: 3;
+    grid-column: 2;
+}
+.SpanLife{
+    border: 5px solid;
+    border-radius: 25px;
+    border-color: #ec9c46;
+    background-color: #df7000c5;
+    font-family: 'Baloo Tammudu 2', cursive;
+    grid-row: 6;
+    grid-column: 2;
+}
+.SpanTemperament{
+    border: 5px solid;
+    border-radius: 25px;
+    border-color: #ec9c46;
+    background-color: #df7000c5;
+    font-family: 'Baloo Tammudu 2', cursive;
+    grid-row: 7;
+    grid-column: 2 / 3;
+}
+.SpanHeight{
+    border: 5px solid;
+    border-radius: 25px;
+    border-color: #ec9c46;
+    background-color: #df7000c5;
+    font-family: 'Baloo Tammudu 2', cursive;
+    grid-row: 4;
+    grid-column: 2;
+}
+.SpanWeight{
+    border: 5px solid;
+    border-radius: 25px;
+    border-color: #ec9c46;
+    background-color: #df7000c5;
+    font-family: 'Baloo Tammudu 2', cursive;
+    grid-row: 5;
+    grid-column: 2;
+}
+.Spans{
+    align-self: center;
+}

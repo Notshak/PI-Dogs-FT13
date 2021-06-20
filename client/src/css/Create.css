@@ -1,0 +1,87 @@
+.form{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(13, 45px);
+    grid-gap: 10px;
+}
+.mapTemp{
+    text-align: start;
+    display: grid;
+    grid-row: 5 / 8;
+    grid-column: 2 / 5;
+    grid-template-columns: repeat(6, 175px);
+    column-gap: 10px;
+    grid-template-rows: 8fr;
+}
+
+.inputs{
+    
+    grid-row: 3;
+    grid-column: 2 / 5;
+}
+.formName{
+    width: 120px;
+    grid-row: 3;
+    grid-column: 2;
+}
+.formweight{
+    width: 80px;
+    grid-row: 3;
+    grid-column: 3;
+}
+.formheight{
+    width: 80px;
+    grid-row: 3;
+    grid-column: 4;
+}
+.formlife_span{
+    width: 80px;
+    grid-row: 3;
+    grid-column: 5;
+}
+.sendMe{
+    width: 80px;
+    grid-row: 3;
+    grid-column: 7;
+}
+.border{
+    align-self: center;
+    border: 5px solid;
+    border-radius: 25px;
+    border-color: #ec9c46;
+    background-color: #df7000c5;
+    font-family: 'Baloo Tammudu 2', cursive;
+}
+.submitButton{
+    align-self: center;
+    font-family: 'Baloo Tammudu 2', cursive;
+    color: rgb(7, 7, 7);
+    background-color: rgba(64, 224, 208, 0);
+    border-color: rgba(79, 204, 191, 0);
+}
+.checkbox{
+    font-family: 'Baloo Tammudu 2', cursive;
+    font-size: 14px;
+}
+.dangerName{
+    grid-row: 4;
+    grid-column: 2;
+}
+.dangerWe{
+    grid-row: 4;
+    grid-column: 3;
+}
+.dangerHe{
+    grid-row: 4;
+    grid-column: 4;
+}
+.dangerLi{
+    grid-row: 4;
+    grid-column: 5;
+}
+.danger{
+    color: tomato;
+    text-align: start;
+    margin-top: 1px;
+    /* align-self: flex-start; */
+}

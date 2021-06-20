@@ -1,5 +1,5 @@
 import { Route } from "react-router-dom"
-import './css/App.css';
+import style from './css/App.css';
 import LandingPage from './components/LandingPage';
 import React from "react";
 import Home from "./components/Home";
@@ -11,8 +11,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Henry Dogs</h1>
-      <Link to="/create_dog" >create breed</Link>
+      <Route  path='/:algo'><Link to="/home" className="HomeLink">Henry Dogs</Link></Route>
       <Route path='/' exact component={LandingPage}/>
       <Route path='/home' exact component={Home}/>
       <Route path="/Dog/" component={ThisDog}/>

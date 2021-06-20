@@ -6,18 +6,17 @@ const {Dog, Temperament} = require("../db");
 var counter = 0;
 var array = []
 const url = `https://api.thedogapi.com/v1/breeds`
-
 async function get8Dogs (req, res){
 
     // const variable = (req.query.name)? (url +`/search?q=${req.query.name}`): (url)
     const variable = url
-    let name = (req.query.name)? (req.query.name):("")
-    let page = (req.query.page)? parseInt(req.query.page):(1)
-    let order = (req.query.order)? req.query.order:("asc")
-    let param = (req.query.param)? req.query.param:("name")
-    let filter = (req.query.filter)? req.query.filter:("")
-    let db = (req.query.db)? req.query.db:("all")
-    array = []
+    let name = (req.query.name)? (req.query.name):("");
+    let page = (req.query.page)? parseInt(req.query.page):(1);
+    let order = (req.query.order)? req.query.order:("asc");
+    let param = (req.query.param)? req.query.param:("name");
+    let filter = (req.query.filter)? req.query.filter:("");
+    let db = (req.query.db)? req.query.db:("all");
+    array = [];
     counter = 0;
     let q = await Dog.findAll({include: Temperament})
     // q = q.dog.dataValues.name
@@ -27,9 +26,10 @@ async function get8Dogs (req, res){
         let n
         let m
         response.data.forEach(el=>{
-            n = el.weight.metric.split(" ");
-            if(n[0]==="NaN"){n[0] = 1};
-            el.weight = ((parseInt(n[0]) / 2) + (parseInt(n[n.length-1]) / 2));
+            n = el.life_span.split(" ");
+            // if(n[0]==="NaN"){n[0] = 1};
+            el.life_span = parseInt(n[0])
+            // el.weight = ((parseInt(n[0]) / 2) + (parseInt(n[n.length-1]) / 2));
             if(el.temperament){
                 m = el.temperament.split(" ");
                 el.temperament = []
@@ -42,10 +42,11 @@ async function get8Dogs (req, res){
             let arrayB = [];
             q.forEach(e =>
             arrayB.push({
+                "id":e.dataValues.id,
                 "name":e.dataValues.name,
                 "weight":e.dataValues.weight,
                 "height":e.dataValues.height,
-                "bred_for":e.dataValues.bred_for,
+                "life_span":e.dataValues.life_span,
                 "temperament":e.temperaments.map(el => el.dataValues.name),
             }))
             if(db === "all"){
@@ -99,9 +100,9 @@ async function get8Dogs (req, res){
     .then(response => res.json(response))
     }
 
-function getById (req, res){
+async function getById (req, res){
     const para = req.params.parametro; //estableciendo parametro
-     if(parseInt(para)){
+     if(para.length < 5){
         return axios.get(url)
         .then(response => {
             raza = response.data.find(e => e.id === parseInt(para))
@@ -109,6 +110,23 @@ function getById (req, res){
         })
         //----------------SIEMPRE REVISAR SI DICE JSON O JASON---------------------------------------
         .catch(error => res.status(500).json({error: `error en /dogs/:parametro modo id`}))}
+     else{
+        let q = await Dog.findAll({include: Temperament})
+        let arrayB = [];
+        await q.forEach(e =>
+        arrayB.push({
+            "id":e.dataValues.id,
+            "name":e.dataValues.name,
+            "weight":e.dataValues.weight,
+            "height":e.dataValues.height,
+            "life_span":e.dataValues.life_span,
+            "temperament":e.temperaments.map(el => el.dataValues.name),
+        }))
+        console.log(arrayB)
+            let raza = arrayB.find(e => e.id === para)
+            if(raza){res.json(raza)}else return res.status(404).json({error: `not found`})
+
+     }
 }
 
 async function addDogs(req, res){
@@ -127,21 +145,8 @@ async function addDogs(req, res){
     res.json(createDog)
 }
 
-function getAllDogs(req, res, next){
-    return Dog.findAll()
-        .then((actualDog)=> res.send(actualDog))
-        .catch(error => res.status(500).json({error: `error en getAllDogs`}))
-}
-// function getAllDogs(req, res, next){
-//     const apiDogs =  axios.get(url);
-//     const createrDogs = Dogs
-//     return Dog.findAll()
-//         .then((actualDog)=> res.send(actualDog))
-//         .catch((err)=> next(err));
-// }
 
 module.exports = {
-    getAllDogs,
     addDogs,
     get8Dogs,
     getById,

@@ -1,9 +1,9 @@
 import axios from "axios"
 import {SET_DOG, SET_DOG_DETAIL, SET_TEMPERAMENT} from "./actionsNames"
 
-export function getAllDogs(name = "",page = "",order = "",param = "",filter = ""){
+export function getAllDogs(name = "",page = "",order = "",param = "",filter = "",db =""){
  return (dispatch) => {
-    return axios.get(`http://localhost:3001/dogs?name=${name}&page=${page}&order=${order}&param=${param}&filter=${filter}`)
+    return axios.get(`http://localhost:3001/dogs?name=${name}&page=${page}&order=${order}&param=${param}&filter=${filter}&db=${db}`)
     // .then(response => response.json())
     .then(response  =>{
         // console.log(response.data)

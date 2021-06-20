@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getTemperaments } from '../actions/actions';
 import { connect } from 'react-redux';
 import axios from "axios";
+import Style from '../css/Create.css'
 
 function Create_Dog (props){
     const [dog, setDog] = useState({
@@ -44,22 +45,26 @@ function Create_Dog (props){
       }, [])
 
 
-      return <form onSubmit={handleSubmit}>
-          <input className={errors.name && 'danger'} name="name" number="text" placeholder="name..." value={dog.name} onChange={handleDogChange}/>
-          {errors.name && (<p className='danger'>{errors.name}</p>)}
-          <input name="weight" type="number" placeholder="weight..." value={dog.weight} onChange={handleDogChange} required/>
-          {errors.weight && <p className='danger'>{errors.weight}</p>}
-          <input name="height" type="number" placeholder="height..." value={dog.height} onChange={handleDogChange} required/>
-          {errors.height && <p className='danger'>{errors.height}</p>}
-          <input name="life_span" type="number" placeholder="life_span..." value={dog.life_span} onChange={handleDogChange} required/>
-          {errors.life_span && <p className='danger'>{errors.life_span}</p>}
+      return <form onSubmit={handleSubmit} className="form">
+          <input className={errors.name && 'danger'} className="formName border" name="name" number="text" placeholder="  name..." value={dog.name} onChange={handleDogChange}/>
+          {errors.name && (<p className='dangerName danger'>{errors.name}</p>)}
+          <input name="weight" type="number" placeholder="  weight..." value={dog.weight} onChange={handleDogChange} className="formweight border" required/>
+          {errors.weight && <p className='dangerWe danger'>{errors.weight}</p>}
+          <input name="height" type="number" placeholder="  height..." value={dog.height} onChange={handleDogChange} className="formheight border" required/>
+          {errors.height && <p className='dangerHe danger'>{errors.height}</p>}
+          <input name="life_span" type="number" placeholder="  life span..." value={dog.life_span} onChange={handleDogChange} className="formlife_span border" required/>
+          {errors.life_span && <p className='dangerLi danger'>{errors.life_span}</p>}
+          <div className="mapTemp">
           {props.temperament && props.temperament.map( e => (
-              <div key={`key_${e}`} >
-              <input value={e} id={`temperament_${e}`} name="temperament" type="checkbox" onChange={handleDogTempChange}/>
-              <label htmlFor={e}>{e}</label>
+            <div key={`key_${e}`} >
+              <input value={e} id={`temperament_${e}`}  name="temperament" type="checkbox" onChange={handleDogTempChange}/>
+              <label className="checkbox" htmlFor={e}>{e}</label>
               </div>
           ))}
-          <input type="submit" value="enviar" />
+          </div>
+          <div className="sendMe border">
+          <input type="submit" value="enviar" className="submitButton" />
+          </div>
       </form>
 }
 function validate(el) {

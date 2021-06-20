@@ -1,0 +1,140 @@
+.Home{
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(8, 176px);
+     /* grid-template-rows: ;  */
+    grid-template-rows: 70px repeat(13, 45px);
+    grid-gap: 10px;
+}
+.CreateLink{
+    color: rgb(0, 0, 0);
+    font-family: 'Baloo Tammudu 2', cursive;
+    align-self: unset;
+    border: 5px solid;
+    border-radius: 25px;
+    height: 40px;
+    width: 220px;
+    border-color: #c7c7c7;
+    background-color: #626262c5;
+    font-size: 28px;
+    text-decoration: none;
+    grid-row: 1;
+    grid-column: 7 / 8;
+}
+.name{
+    font-family: 'Baloo Tammudu 2', cursive;
+    border: 5px solid;
+    border-radius: 25px;
+    border-color: #ec9c46;
+    background-color: #df7000c5;
+    grid-row: 3;
+    grid-column: 1;
+}
+.order{
+    font-family: 'Baloo Tammudu 2', cursive;
+    text-align: center;
+    border: 5px solid;
+    border-radius: 25px;
+    border-color: #ec9c46;
+    background-color: #df7000c5;
+    grid-row: 4;
+    grid-column: 1;
+}
+.filter{
+    font-family: 'Baloo Tammudu 2', cursive;
+    text-align: center;
+    border: 5px solid;
+    border-radius: 25px;
+    border-color: #ec9c46;
+    background-color: #df7000c5;
+    grid-row: 5;
+    grid-column: 1;
+}
+.page{
+    font-family: 'Baloo Tammudu 2', cursive;
+    text-align: start;
+    border: 5px solid;
+    border-radius: 25px;
+    border-color: #c7c7c7;
+    background-color: #626262c5;
+    grid-row: 8;
+    grid-column: 1;
+}
+.param{
+    font-family: 'Baloo Tammudu 2', cursive;
+    text-align: center;
+    border: 5px solid;
+    border-radius: 25px;
+    border-color: #ec9c46;
+    background-color: #df7000c5;
+    grid-row: 6;
+    grid-column: 1;
+}
+.valuee{
+    text-align: center;
+}
+.db{
+    font-family: 'Baloo Tammudu 2', cursive;
+    text-indent: 5px;
+    border: 5px solid;
+    border-radius: 25px;
+    border-color: #ec9c46;
+    background-color: #df7000c5;
+    grid-row: 7;
+    grid-column: 1;
+}
+.apply{
+    font-family: 'Baloo Tammudu 2', cursive;
+    text-align: start;
+    border: 5px solid;
+    border-radius: 25px;
+    border-color: #c7c7c7;
+    background-color: #626262c5;
+    grid-row: 9;
+    grid-column: 1;
+}
+.OneDog{
+    /* grid-area: 3 / 2 / 13 / 6; */
+    grid-row: 2 / 14;
+    grid-column: 2 / 9;
+    display: grid;
+    column-gap: 45px;
+    row-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 160px);
+}
+.Dogo{
+    text-decoration:none;
+    border: 5px solid;
+    border-radius: 25px;
+    border-color: #e9b984;
+    background-color: #b18a6270;
+    display: grid;
+    row-gap: 10px;
+    column-gap: 7px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 25px 1fr;
+}
+.DogoImg{
+    grid-column: 1;
+    grid-row: 1 / 2;
+    border-radius: 21px;
+}
+.DogoTemp{
+    color: rgb(0, 0, 0);
+    font-family: 'Baloo Tammudu 2', cursive;
+    text-align: center;
+    grid-column: 2;
+    grid-row: 2;
+}
+.DogoName{
+    color: rgb(0, 0, 0);
+    font-family: 'Baloo Tammudu 2', cursive;
+    text-decoration:none;
+    grid-column: 3;
+    grid-row: 2;
+}
+.DogosSpan{
+    color: rgb(0, 0, 0);
+    font-family: 'Baloo Tammudu 2', cursive;
+}

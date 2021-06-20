@@ -1,7 +1,39 @@
 .App {
   text-align: center;
+  align-content: center;
+  /* height: 245px; */
+  /* height: 100vh; */
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  grid-template-rows: repeat(14, 45px);
+  grid-gap: 10px;
 }
-
+.thisDogDiv{
+  grid-row: 2 / 14;
+  grid-column: 1 / 13;
+}
+.form{
+  grid-row: 2 / 14;
+  grid-column: 1 / 14;
+}
+.Landing{
+  grid-row: 10;
+  grid-column: 7;
+}
+.HomeLink{
+  color: rgb(0, 0, 0);
+  font-family: 'Baloo Tammudu 2', cursive;
+  border: 5px solid;
+  border-radius: 25px;
+  height: 40px;
+  width: 220px;
+  border-color: #ec9c46;
+  background-color: #df7000c5;
+  font-size: 28px;
+  text-decoration: none;
+  grid-row: 1;
+  grid-column: 6 / 8;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
