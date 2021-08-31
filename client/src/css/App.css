@@ -1,8 +1,6 @@
 .App {
   text-align: center;
   align-content: center;
-  /* height: 245px; */
-  /* height: 100vh; */
   display: grid;
   grid-template-columns: repeat(13, 1fr);
   grid-template-rows: repeat(14, 45px);
@@ -18,7 +16,7 @@
 }
 .Landing{
   grid-row: 10;
-  grid-column: 7;
+  grid-column: 6;
 }
 .HomeLink{
   color: rgb(0, 0, 0);
@@ -54,6 +52,12 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+.Gif{
+  height: 22rem;
+  position: relative;
+  left: 10rem;
+  top: 40rem;
 }
 
 .App-link {

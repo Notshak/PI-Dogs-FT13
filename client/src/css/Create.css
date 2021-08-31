@@ -7,9 +7,9 @@
 .mapTemp{
     text-align: start;
     display: grid;
-    grid-row: 5 / 8;
-    grid-column: 2 / 5;
-    grid-template-columns: repeat(6, 175px);
+    grid-row: 5 / 6;
+    grid-column: 2 / 8;
+    grid-template-columns: repeat(7, 11.5rem);
     column-gap: 10px;
     grid-template-rows: 8fr;
 }
@@ -17,30 +17,30 @@
 .inputs{
     
     grid-row: 3;
-    grid-column: 2 / 5;
+    grid-column: 2 / 6;
 }
 .formName{
-    width: 120px;
+    width: 60%;
     grid-row: 3;
     grid-column: 2;
 }
 .formweight{
-    width: 80px;
+    width: 60%;
     grid-row: 3;
     grid-column: 3;
 }
 .formheight{
-    width: 80px;
+    width: 60%;
     grid-row: 3;
     grid-column: 4;
 }
 .formlife_span{
-    width: 80px;
+    width: 60%;
     grid-row: 3;
     grid-column: 5;
 }
 .sendMe{
-    width: 80px;
+    width: 60%;
     grid-row: 3;
     grid-column: 7;
 }
@@ -51,6 +51,7 @@
     border-color: #ec9c46;
     background-color: #df7000c5;
     font-family: 'Baloo Tammudu 2', cursive;
+    font-size: 1.2rem;
 }
 .submitButton{
     align-self: center;
@@ -61,7 +62,7 @@
 }
 .checkbox{
     font-family: 'Baloo Tammudu 2', cursive;
-    font-size: 14px;
+    font-size: 1.2rem;
 }
 .dangerName{
     grid-row: 4;

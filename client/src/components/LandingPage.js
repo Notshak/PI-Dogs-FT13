@@ -1,12 +1,12 @@
 import React from 'react'
-import style from '../css/LandingPage.css'
+import  '../css/LandingPage.css'
 
 
 function LandingPage(){
     return (
         <div className="Landing" >
             <button className="LandingButton">
-            <a className="LandingButtonLink" href='http://localhost:3000/home'>Doge</a>
+            <a className="LandingButtonLink" href='http://localhost:3000/home'>let's see the dogs</a>
             </button>
         </div>
     )

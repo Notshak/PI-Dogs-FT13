@@ -3,14 +3,16 @@
     font-family: 'Baloo Tammudu 2', cursive;
     font-size: 28px;
     text-decoration: none;
-    width: 200px;
-    height: 60px;
+    width: 30rem;
+    height: 7rem;
     border: 5px solid;
-    border-radius: 25px;
+    border-radius: 50px;
     border-color: #ec9c46;
     background-color: #df7000c5;
+
 }
 .LandingButtonLink{
     text-decoration: none;
+    font-size: 3rem;
     color:rgb(0, 0, 0)
 }

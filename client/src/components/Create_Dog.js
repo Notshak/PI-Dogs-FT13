@@ -63,7 +63,7 @@ function Create_Dog (props){
           ))}
           </div>
           <div className="sendMe border">
-          <input type="submit" value="enviar" className="submitButton" />
+          <input type="submit" value="enviar" className="submitButton border" />
           </div>
       </form>
 }

@@ -3,7 +3,7 @@ import Dogos from "./Dogos";
 import { Link } from "react-router-dom";
 import { getAllDogs, getTemperaments } from '../actions/actions';
 import { connect } from 'react-redux';
-import style from "../css/Home.css"
+import  "../css/Home.css"
 
 function Home(props){
     const [input, setInput] = useState({
@@ -15,6 +15,7 @@ function Home(props){
         db:"",
     });
     const handleInputChange = function (e) {
+        console.log(`hola`)
         setInput({
           ...input,
           [e.target.name]: e.target.value
@@ -42,7 +43,6 @@ function Home(props){
 
 
     return <div className="Home">
-        
             <Link to="/create_dog" className="CreateLink">create breed</Link>
             <input name="name" value={input.name} placeholder="search by name" className="name" onChange={handleInputChange}/>
             <select className="filter" name="filter" className="filter" onChange={handleInputChange}>

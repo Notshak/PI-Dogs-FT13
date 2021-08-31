@@ -5,19 +5,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("https://fsb.zobj.net/crop.php?r=2IVlZ3rCHALdMrt09Y2WhONavzDLwRwrMXRbrKrr-PXfdTM-cHl8U3RR6WwOx01U64OcAqvq-pEd1TEs-bB4F-hU-O26OotLprBg8bHcccwmHCPk6Sys4Q5HZRZDnvZpGMZgJen-mn06P5vQ");
-  background-size: 40%;
+  background-image: url(https://wcm.transat.com/getmedia/acd8d8bb-0836-4e75-b1db-79059d7b6796/VIK-Arena-Blanca-Aerial-002?width=1400);
   background-repeat: no-repeat;
-  background-position-x:center;
+  background-size: 120%;
+  background-position: center;
   background-color: #ded4b1;
-  /* background-position-y: -40px; */
-  /* height: 100vh; */
-  /* height: 245px; */
-
-
-  /* grid-template-rows: 1fr 1fr 1fr; */
-  /* grid-template-rows: 15% 15% 15% 15% 40%; */
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
